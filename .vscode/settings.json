@@ -1,0 +1,13 @@
+{
+  "conventionalCommits.scopes": [
+    "nest",
+    "vscode",
+    "npm",
+    "log",
+    "config",
+    "mongo",
+    "users",
+    "env",
+    "api"
+  ]
+}
