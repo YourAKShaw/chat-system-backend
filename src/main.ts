@@ -9,6 +9,13 @@ async function bootstrap() {
 
   app.setGlobalPrefix('api');
 
+  // Enable CORS for WebSocket support
+  app.enableCors({
+    origin: '*', // In production, set this to your frontend URL(s)
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    credentials: true,
+  });
+
   const configService = app.get(ConfigService);
   const port = configService.get<number>('PORT') || 3000;
 
