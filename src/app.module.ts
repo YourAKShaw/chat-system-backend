@@ -6,6 +6,7 @@ import { AppService } from '@src/app.service';
 import CustomLogger from '@src/common/logger';
 import { configValidationSchema } from '@src/config/config.validation';
 import { UsersModule } from './users/users.module';
+import { ChatModule } from './chat/chat.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { UsersModule } from './users/users.module';
       }),
     }),
     UsersModule,
+    ChatModule,
   ],
   controllers: [AppController],
   providers: [
