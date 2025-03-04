@@ -74,7 +74,9 @@ export default class CustomLogger {
           emojiToLog = emoji.get('grey_question');
       }
 
-      const timestamp = new Date(info.timestamp).toLocaleString('en-US', {
+      const timestamp = new Date(
+        info.timestamp as string | number | Date,
+      ).toLocaleString('en-US', {
         year: 'numeric',
         month: '2-digit',
         day: '2-digit',
