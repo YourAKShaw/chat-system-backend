@@ -8,6 +8,9 @@ export class Message extends Document {
   @Prop({ required: true, type: MongooseSchema.Types.ObjectId, ref: 'User' })
   sender!: User | MongooseSchema.Types.ObjectId;
 
+  @Prop({ required: true, type: MongooseSchema.Types.ObjectId, ref: 'User' })
+  receiver!: User | MongooseSchema.Types.ObjectId;
+
   @Prop({ required: true })
   content!: string;
 

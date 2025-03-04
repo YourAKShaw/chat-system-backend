@@ -70,9 +70,11 @@ export class ChatController {
     @Request() req: any,
     @Param('id') conversationId: string,
     @Body('content') content: string,
+    @Body('receiverId') receiverId: string,
   ) {
     const message = await this.chatService.createMessage(
       req.user.userId,
+      receiverId,
       conversationId,
       content,
     );

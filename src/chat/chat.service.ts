@@ -77,6 +77,7 @@ export class ChatService {
 
   async createMessage(
     senderId: string,
+    receiverId: string,
     conversationId: string,
     content: string,
   ): Promise<Message> {
@@ -97,6 +98,7 @@ export class ChatService {
     // Create and save the message
     const newMessage = new this.messageModel({
       sender: senderId,
+      receiver: receiverId,
       content,
       conversation: conversationId,
     });
