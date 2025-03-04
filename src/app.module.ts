@@ -27,12 +27,6 @@ import { ChatModule } from './chat/chat.module';
     ChatModule,
   ],
   controllers: [AppController],
-  providers: [
-    AppService,
-    {
-      provide: CustomLogger,
-      useClass: CustomLogger,
-    },
-  ],
+  providers: [AppService, { provide: CustomLogger, useClass: CustomLogger }],
 })
 export class AppModule {}
